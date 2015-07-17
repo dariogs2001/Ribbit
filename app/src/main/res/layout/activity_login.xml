@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.dgonzalez.ribbit.LoginActivity"
+                style="@style/AuthBackground">
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        style="@style/AuthBackgroundImage"/>
+
+    <TextView
+        android:text="@string/app_name"
+        android:id="@+id/title"
+        style="@style/AuthTitle"/>
+
+    <TextView
+        android:text="@string/subtitle"
+        android:id="@+id/subTitle"
+        style="@style/AuthSubtitle"/>
+
+    <LinearLayout
+        android:id="@+id/editTextLayout"
+        style="@style/AuthFieldContainer">
+
+        <EditText
+            android:id="@+id/userNameField"
+            android:hint="@string/username_hint"
+            style="@style/EditText"
+            android:layout_above="@+id/passwordField">
+            <requestFocus/>
+        </EditText>
+
+        <EditText
+            style="@style/EditText"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/passwordField"
+            android:hint="@string/password_hint"
+            android:layout_above="@+id/loginButton2">
+        </EditText>
+    </LinearLayout>
+
+    <Button
+        android:text="@string/login_button_label"
+        android:id="@+id/loginButton2"
+        style="@style/AuthButton"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editTextLayout"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signUpText_label"
+        android:id="@+id/signUpText"
+        android:layout_below="@id/loginButton2"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"/>
+
+
+
+</RelativeLayout>
